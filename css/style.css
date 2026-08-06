@@ -1479,3 +1479,133 @@ a.nav-logo:hover span { color: #7ec8dd; }
 @media (max-width: 560px) {
     .footer-grid { grid-template-columns: 1fr; }
 }
+
+/* ==========================================
+   EVENT GALLERY
+   ========================================== */
+
+.gallery {
+    margin: 4rem0;
+}
+
+.gallery-heading {
+    font-size: 1.8rem;
+    color: 1a3a52;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-weight: 700;
+}
+
+.gallery-frame {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.gallery-viepoint {
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    flex: 1;
+}
+
+.gallery-viewport::-webkit-scrollbar { display: none; }
+
+.gallery-track {
+    display: flex;
+    gap: 1rem
+}
+
+.gallery-item {
+    flex: 0 0 calc(25% - 0.75rem);
+    aspect-ratio: 1 / 1;
+    scroll-snap-aslign: start;
+    padding: 0;
+    border: 1px solid  #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+    background:  #f0f0f0;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3 ease;
+}
+
+.gallery-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 px 20px  rgba(0, 0, 0, 0.12);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.gallery-arrow {
+    flex: 0 0 auto;
+    width: 44px;
+    border-radius: 50%;
+    border: none;
+    background:  #398CA4;
+    color:  white;
+    font-size: 1.6rem;
+    line-height: 1;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+.gallery-arrow:hover {
+    background: #2b6a7f;
+    transform: scale(1.08);
+}
+
+.gallery-arrow:disabled {
+    background: #cfd8dc;
+    cursor: default;
+    transform: none;
+}
+
+.lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(10, 25, 40, 0.92);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    padding: 2rem;
+}
+
+.lightbox.open { display: flex; }
+
+.lightbox-img {
+    max-width: 90vw;
+    max-height: 85vh;
+    border-radius: 8px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 1.5rem;
+    right: 2rem;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2.5rem;
+    line-height: 1;
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.lightbox-close:hover { opacity: 1; }
+
+@media (max-width: 900px) {
+    .gallery-item { flex: 0 0 calc(50% - 0.5rem); }
+}
+
+@media (max-width: 560px) {
+    .gallery-item { flex: 0 0 100%; }
+    .gallery-arrow { width: 36px; height: 36px; font-size: 1.3rem; }
+}
