@@ -198,5 +198,52 @@
             <p>Licensed &amp; Insured | Professional Security Services | Houston, Texas</p>
         </div>
     </footer>
+<script>
+        (function () {
+            var viewport = document.querySelector('.gallery-viewport');
+            if (!viewport) return;
+
+            var prev = document.querySelector('.gallery-prev');
+            var next = document.querySelector('.gallery-next');
+            var lightbox = document.getElementById('lightbox');
+            var lightboxImg = lightbox.querySelector('.lightbox-img');
+            var closeBtn = lightbox.querySelector('.lightbox-close');
+
+            function updateArrows() {
+                prev.disabled = viewport.scrollLeft <= 5;
+                next.disabled = viewport.scrollLeft >= viewport.scrollWidth - viewport.clientWidth - 5;
+            }
+
+            next.addEventListener('click', function () {
+                viewport.scrollBy({ left: viewport.clientWidth, behavior: 'smooth' });
+            });
+
+            prev.addEventListener('click', function () {
+                viewport.scrollBy({ left: -viewport.clientWidth, behavior: 'smooth' });
+            });
+
+            viewport.addEventListener('scroll', updateArrows);
+            window.addEventListener('resize', updateArrows);
+            updateArrows();
+
+            document.querySelectorAll('.gallery-item').forEach(function (item) {
+                item.addEventListener('click', function () {
+                    lightboxImg.src = item.dataset.full;
+                    lightboxImg.alt = item.querySelector('img').alt;
+                    lightbox.classList.add('open');
+                });
+            });
+
+            function closeLightbox() { lightbox.classList.remove('open'); }
+
+            closeBtn.addEventListener('click', closeLightbox);
+            lightbox.addEventListener('click', function (e) {
+                if (e.target === lightbox) closeLightbox();
+            });
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape') closeLightbox();
+            });
+        })();
+    </script>
 </body>
 </html>
