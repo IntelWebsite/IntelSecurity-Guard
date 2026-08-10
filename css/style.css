@@ -1609,3 +1609,26 @@ a.nav-logo:hover span { color: #7ec8dd; }
     .gallery-item { flex: 0 0 100%; }
     .gallery-arrow { width: 36px; height: 36px; font-size: 1.3rem; }
 }
+/* Homepage contact form - stack fields, no card background */
+.contact-content .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background: none;
+    padding: 0;
+}
+
+.contact-content .contact-form input,
+.contact-content .contact-form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+.contact-content .contact-form button {
+    margin-top: 0.5rem;
+    align-self: flex-start;
+}
