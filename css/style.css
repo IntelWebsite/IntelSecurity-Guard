@@ -1632,3 +1632,153 @@ a.nav-logo:hover span { color: #7ec8dd; }
     margin-top: 0.5rem;
     align-self: flex-start;
 }
+/* ==========================================
+   MOBILE FIXES
+   ========================================== */
+
+@media (max-width: 768px) {
+
+    /* Nav: stack, keep readable */
+    .navbar .nav-container {
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        gap: 0.75rem;
+        padding: 0 1rem;
+    }
+
+    .navbar .nav-menu {
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        gap: 1rem !important;
+        font-size: 0.9rem;
+    }
+
+    .navbar .nav-phone {
+        margin-left: 0 !important;
+    }
+
+    .logo-img { height: 48px; }
+
+    a.nav-logo span { font-size: 1.1rem; }
+
+    /* Dropdown becomes inline on touch */
+    .nav-dropdown {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        box-shadow: none;
+        background: transparent;
+        border: none;
+        min-width: 0;
+        display: none;
+    }
+
+    .nav-item-dropdown:hover .nav-dropdown { display: block; }
+
+    /* Heroes */
+    .hero,
+    .page-hero-split {
+        grid-template-columns: 1fr;
+        padding: 2.5rem 1.25rem;
+        min-height: auto;
+        text-align: center;
+    }
+
+    .hero-content h1,
+    .page-hero-split .hero-content h1 { font-size: 1.9rem; }
+
+    .hero-content p { font-size: 1rem; }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-buttons .btn { width: 100%; max-width: 280px; }
+
+    .page-hero { padding: 3rem 1.25rem; }
+
+    .page-hero h1 { font-size: 1.9rem; }
+
+    /* Containers */
+    .container,
+    .section-container {
+        padding: 0 1.25rem;
+    }
+
+    /* Two-column blocks collapse */
+    .mission-content,
+    .about-content,
+    .contact-content,
+    .contact-wrapper,
+    .feature-highlights,
+    .services-grid,
+    .benefits-grid,
+    .values-grid,
+    .operations-grid,
+    .checklist-grid,
+    .process-steps,
+    .contact-methods,
+    .stats-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem;
+    }
+
+    /* Client logos: 2 across */
+    .clients-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 1rem;
+    }
+
+    .client-logo {
+        min-height: 110px;
+        padding: 0.75rem;
+    }
+
+    /* Headings */
+    section h2,
+    .section-title { font-size: 1.7rem; }
+
+    .checklist-section h3,
+    .process-section h3,
+    .gallery-heading { font-size: 1.4rem; }
+
+    /* Cards breathe less */
+    .feature-highlight,
+    .team-highlight,
+    .pcma-section { padding: 2rem 1.25rem; }
+
+    .contact-form { padding: 1.5rem; }
+
+    /* Footer */
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 0 1.25rem;
+        text-align: center;
+    }
+
+    .footer-brand .footer-logo { height: 70px; }
+
+    .affiliations { gap: 1.5rem; }
+
+    .affiliation-logo img { height: 55px; }
+
+    /* Tap targets */
+    .btn,
+    .cta-button,
+    .submit-button { padding: 0.9rem 1.5rem; }
+
+    .cta-button { display: block; margin: 0.75rem auto; max-width: 300px; }
+}
+
+@media (max-width: 480px) {
+    .navbar .nav-menu { gap: 0.75rem !important; font-size: 0.85rem; }
+    .clients-grid { grid-template-columns: 1fr !important; }
+    .hero-content h1,
+    .page-hero h1 { font-size: 1.6rem; }
+    section { padding: 2.5rem 0; }
+}
