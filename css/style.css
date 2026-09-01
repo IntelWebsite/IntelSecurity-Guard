@@ -1782,10 +1782,3 @@ a.nav-logo:hover span { color: #7ec8dd; }
     .page-hero h1 { font-size: 1.6rem; }
     section { padding: 2.5rem 0; }
 }
-
-/* Homepage hero image sizing */
-.hero .hero-image img {
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-}
