@@ -663,11 +663,13 @@ a.nav-logo:hover span { color: #7ec8dd; }
 }
 
 .page-hero-split .hero-image img {
-    max-height: 280px;
+    max-height: 320px;
+    max-width: 100%;
     width: auto;
+    height: auto;
+    object-fit: contain;
     margin: 0 auto;
 }
-
 /* About section */
 .about-section { padding: 5rem 0; }
 
