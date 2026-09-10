@@ -1428,6 +1428,16 @@ a.nav-logo:hover span { color: #7ec8dd; }
 
 .footer-brand a:hover { text-decoration: underline; }
 
+ .footer-license {
+    color: rgba(255, 255, 255, 0.85);
+    transition: color 0.3s ease;
+    cursor: default;
+}
+
+.footer-license:hover {
+    color: #7ec8dd;
+}
+
 .footer-brand a:has(.footer-logo) {
     display: inline-block;
     transition: opacity 0.3s ease;
@@ -1765,16 +1775,6 @@ a.nav-logo:hover span { color: #7ec8dd; }
 
     .footer-brand .footer-logo { height: 70px; }
    
-   .footer-license {
-    color: rgba(255, 255, 255, 0.85);
-    transition: color 0.3s ease;
-    cursor: default;
-    }
-
-.footer-license:hover {
-    color: #7ec8dd;
-    }
-
     .affiliations { gap: 1.5rem; }
 
     .affiliation-logo img { height: 55px; }
