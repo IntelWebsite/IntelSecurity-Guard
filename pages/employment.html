@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employment Opportunity | Intel Security</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <!-- NAVIGATION -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="nav-logo">
+                <img src="../images/logo.svg" alt="Intel Security Logo" class="logo-img">
+                <span>Intel Security</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="../index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+
+                <li class="nav-item-dropdown">
+                    <a href="#" class="nav-link nav-services">Services</a>
+                    <div class="nav-dropdown">
+                        <a href="event-security.html" class="dropdown-item">Event Security</a>
+                        <a href="building-security.html" class="dropdown-item">Building Security</a>
+                        <a href="security-consulting.html" class="dropdown-item">Security Consulting</a>
+                    </div>
+                </li>
+
+                <li><a href="testimonials.html" class="nav-link">Clients</a></li>
+                <li><a href="employment.html" class="nav-link">Careers</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <a href="tel:2818090951" class="nav-phone">281-809-0951</a>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>Employment Opportunity</h1>
+            <p>Join a team trusted by Houston's leading organizations and events.</p>
+        </div>
+    </section>
+
+    <!-- APPLICATION SECTION -->
+    <section class="contact-section">
+        <div class="container">
+            <div style="max-width: 600px; margin: 0 auto;">
+
+                <div class="contact-form">
+                    <h3>Submit Your Interest</h3>
+                    <p style="color: #555; margin-bottom: 1.5rem; font-size: 0.95rem;">
+                        A Texas Private Security license is required for the application.
+                        Our team will reach out to you for an appointment to
+                        complete the application and interview in our main office.
+                    </p>
+
+                    <form action="https://formspree.io/f/mgavdybe" method="POST">
+                        <input type="hidden" name="_subject" value="New employment interest - Intel Security">
+
+                        <div class="form-group">
+                            <label for="first-name">First Name <span style="color:#B22234;">*</span></label>
+                            <input type="text" id="first-name" name="first_name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="last-name">Last Name <span style="color:#B22234;">*</span></label>
+                            <input type="text" id="last-name" name="last_name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email <span style="color:#B22234;">*</span></label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+
+                        <div class="form-group">
+                            <label>What is your security license level? <span style="font-weight:400; color:#6b7280;"> (check all that apply)</span></label>
+                            <label class="checkbox-line"><input type="checkbox" name="Security License Level" value="Level 1"> Level 1</label>
+                            <label class="checkbox-line"><input type="checkbox" name="Security License Level" value="Level 2"> Level 2</label>
+                            <label class="checkbox-line"><input type="checkbox" name="Security License Level" value="Level 3"> Level 3</label>
+                            <label class="checkbox-line"><input type="checkbox" name="Security License Level" value="Level 4"> Level 4</label>
+                        </div>
+
+                        <button type="submit" class="submit-button">Submit Interest</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="../index.html"><img src="../images/logo.svg" alt="Intel Security" class="footer-logo"></a>
+                <address>
+                    1301 McKinney St, Suite 302<br>
+                    Houston, TX 77010<br><br>
+                    Office: <a href="tel:2818090951">(281) 809-0951</a><br>
+                    <a href="mailto:services@intelsecurity.org">services@intelsecurity.org</a><br>
+                    <span class="footer-license"> TX License  #B29715801</span>
+                </address>
+            </div>
+
+            <div class="footer-col">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="event-security.html">Event Security</a></li>
+                    <li><a href="building-security.html">Building Security</a></li>
+                    <li><a href="security-consulting.html">Security Consulting</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="testimonials.html">Our Clients</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Get Started</h4>
+                <ul>
+                    <li><a href="contact.html">Request a Quote</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="employment.html">Careers</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Intel Security. All Rights Reserved. Powered By Intel Security Staff Inc.</p>
+            <p>Licensed &amp; Insured | Professional Security Services | Houston, Texas</p>
+        </div>
+    </footer>
+    <script>
+  const licBoxes = document.querySelectorAll('input[name="Security License Level"]');
+  licBoxes.forEach(b => b.addEventListener('change', () => {
+    const n = document.querySelectorAll('input[name="Security License Level"]:checked').length;
+    licBoxes.forEach(x => { x.disabled = (!x.checked && n >= 4); });
+  }));
+</script>
+</body>
+</html>
